@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Test API Message</title>
+</head>
+<body>
+    <h1>Test API Message</h1>
+    <div>
+        <input type="number" id="receiver_id" placeholder="ID destinataire">
+        <input type="text" id="message" placeholder="Message">
+        <button onclick="sendMessage()">Envoyer</button>
+    </div>
+    <pre id="result"></pre>
+
+    <script>
+    function sendMessage() {
+        const receiver_id = document.getElementById('receiver_id').value;
+        const message = document.getElementById('message').value;
+        
+        fetch('api/messages.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ receiver_id: receiver_id, message: message })
+        })
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('result').innerText = data;
+        })
+        .catch(err => {
+            document.getElementById('result').innerText = 'Erreur: ' + err.message;
+        });
+    }
+    </script>
+</body>
+</html>
