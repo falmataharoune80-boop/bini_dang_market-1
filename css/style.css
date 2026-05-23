@@ -1,0 +1,395 @@
+/* ============================================
+   Bini-Dang Market - Style original
+   Header noir épais, icônes catégories NOIRES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ========== HEADER NOIR ÉPAIS ========== */
+header {
+    background-color: #000000;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.cart-icon {
+    font-size: 1.8rem;
+    color: #f97316;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cart-icon:hover {
+    color: #ea580c;
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #f97316;
+}
+
+.btn-orange {
+    background-color: #f97316;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    color: white;
+}
+
+.btn-orange:hover {
+    background-color: #ea580c;
+}
+
+/* ========== PAGE TITRE ========== */
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* ========== CATÉGORIES - ICÔNES NOIRES ========== */
+.categories-section {
+    margin: 2rem 0;
+}
+
+.categories-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+}
+
+.category-card {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #000000;  /* Icônes NOIRES */
+}
+
+.category-card span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* ========== GRILLE PRODUITS ========== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.product-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1f2937;
+    text-decoration: none;
+    display: block;
+}
+
+.product-title:hover {
+    color: #f97316;
+}
+
+.product-price {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* ========== BOUTON AJOUTER AU PANIER (NOIR) ========== */
+.btn-add,
+button.btn-add {
+    background-color: #000000 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 40px !important;
+    padding: 0.6rem 0 !important;
+    width: 100% !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s !important;
+}
+
+.btn-add:hover,
+button.btn-add:hover {
+    background-color: #333333 !important;
+}
+
+.btn-disabled {
+    background-color: #9ca3af !important;
+    cursor: not-allowed !important;
+}
+
+/* ========== STATUT PRODUIT ========== */
+.status-available {
+    color: #16a34a;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 0.25rem 0;
+}
+
+.status-sold {
+    color: #dc2626;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin: 0.25rem 0;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.footer-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+footer h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .cart-icon {
+        font-size: 1.3rem;
+    }
+    
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        justify-content: center;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* ========== POST-AD PAGE ========== */
+.post-ad-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.post-ad-header {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+.post-ad-header h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+.post-ad-header p { font-size: 0.85rem; color: #f97316; }
+.post-ad-body { padding: 2rem; }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-size: 0.85rem;
+}
+.form-group label .required { color: #dc2626; margin-left: 0.25rem; }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.1);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.flash-sale-checkbox { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+.flash-sale-checkbox input { width: auto; cursor: pointer; }
+.discount-field {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+.image-upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+.image-upload-area:hover { border-color: #f97316; }
+.image-preview { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.image-preview img { width: 80px; height: 80px; object-fit: cover; border-radius: 0.5rem; }
+.btn-submit {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+.btn-submit:hover { background-color: #333333; }
+.alert { padding: 0.75rem; border-radius: 0.5rem; margin-bottom: 1rem; }
+.alert.success { background: #d1fae5; color: #16a34a; border-left: 4px solid #16a34a; }
+.alert.error { background: #fee2e2; color: #dc2626; border-left: 4px solid #dc2626; }
+@media (max-width: 640px) {
+    .post-ad-body { padding: 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+}
